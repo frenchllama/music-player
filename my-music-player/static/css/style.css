@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #191414; /* Dark background color similar to Spotify */
+    color: #000; /* Text color set to black */
+    margin: 0;
+    padding: 0;
+}
+
+#music-player {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #1DB954; /* Spotify green */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1, h2 {
+    color: #000; /* Text color set to black */
+}
+
+strong {
+    color: #1DB954; /* Spotify green */
+}
+
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#buttons-top {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #000; /* Background color set to black */
+    color: #fff; /* Text color set to white */
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333; /* Darker black for hover effect */
+}
+
+#song-list {
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000; /* Text color set to black */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#current-song {
+    color: #fff; /* Set text color to white */
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Random Music Player</title>
+</head>
+<body>
+    <div id="music-player">
+        <h1>Random Music Player</h1>
+        
+        <!-- Buttons at the top -->
+        <div id="buttons-top">
+            <button onclick="playRandom()">Play Random Song</button>
+            <button onclick="playInOrder()">Play in Order</button>
+            <button onclick="playNext()">Play Next</button>
+        </div>
+        
+        <audio controls id="audio-player">
+            <source src="{{ url_for('download_file', filename=random_song) }}" type="audio/mp3" id="audio-source">
+            Your browser does not support the audio element.
+        </audio>
+        <p>Now playing: <strong id="current-song">{{ random_song }}</strong></p>
+        
+        <!-- Song List at the bottom -->
+        <div id="song-list">
+            <h2>Song List</h2>
+            <ul>
+                {% for song in songs %}
+                    <li><a href="#" onclick="play('{{ song }}')">{{ song }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
